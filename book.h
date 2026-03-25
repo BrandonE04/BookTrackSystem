@@ -22,7 +22,6 @@ class Book {
             this->read = read;
         }
 
-
 };
 
 std::ostream& operator<<(std::ostream& o, const Book& b){
