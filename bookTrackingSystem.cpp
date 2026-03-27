@@ -1,7 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include "book.h"
 #include "library.h"
+
+Library library = Library();
 
 int main(){
     char select;
@@ -19,9 +22,34 @@ int main(){
         std::cin >> select;
 
         switch(select){
-            case '1':
-                //Add Book
+            case '1': {
+                std::string title;
+                std::string author;
+                std::string description;
+                int pages;
+                std::string genre;
+                bool read;
+                
+                printf("Enter Book Title: ");
+                std::cin.ignore();
+                std::getline(std::cin, title);
+
+                printf("Enter Book Author: ");
+                std::getline(std::cin, author);
+
+                printf("Enter Book Description: ");
+                std::getline(std::cin, description);
+
+                printf("Enter # of Pages: ");
+                scanf("%d",&pages);
+
+                printf("Enter Book Genre: ");
+                std::cin.ignore();
+                std::getline(std::cin, genre);
+
+                library.addBook(title, author, description, pages, genre, false);
                 break;
+            }
             case '2':
                 //Remove Book
                 break;
