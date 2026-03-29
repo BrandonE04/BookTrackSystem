@@ -57,7 +57,9 @@ int main(){
                 //Update Book
                 break;
             case '4':
-                //Print Books
+                for (int i = 0; i < library.books.size(); i++){
+                    std::cout << library.books[i];
+                }
                 break;
             case 'X':
                 running = false;
