@@ -13,4 +13,8 @@ class Library {
             this->books.push_back(Book(title, author, description, pages, genre, read));
         }
 
+        void removeBook(int removeId){
+            this->books.erase(books.begin() + removeId);
+        }
+
 };

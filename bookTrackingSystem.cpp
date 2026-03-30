@@ -51,7 +51,10 @@ int main(){
                 break;
             }
             case '2':
-                //Remove Book
+                int removeId;
+                printf("Enter the id of the book you would like to remove: ");
+                scanf("%d", &removeId);
+                library.removeBook(removeId);
                 break;
             case '3':
                 //Update Book
