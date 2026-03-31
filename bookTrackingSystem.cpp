@@ -56,9 +56,26 @@ int main(){
                 scanf("%d", &removeId);
                 library.removeBook(removeId);
                 break;
-            case '3':
-                //Update Book
+            case '3':{
+                int updateChoice;
+                int updateId;
+
+                printf("Enter the id of the book you wish to update: ");
+                std::cin >> updateId;
+
+                printf("Update Menu \n");
+                printf("1. Update Name \n");
+                printf("2. Update Author \n");
+                printf("3. Update Description \n");
+                printf("4. Update # of Pages \n");
+                printf("5. Update Genre \n");
+                printf("6. Mark as Read \n");
+                std::cin >> updateChoice;
+                
+                library.updateBook(updateId, updateChoice);
+
                 break;
+            }
             case '4':
                 for (int i = 0; i < library.books.size(); i++){
                     std::cout << library.books[i];

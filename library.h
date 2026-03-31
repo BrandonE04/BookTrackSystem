@@ -17,4 +17,8 @@ class Library {
             this->books.erase(books.begin() + removeId);
         }
 
+        void updateBook(int updateId, int updateChoice){
+            return;
+        }
+
 };
