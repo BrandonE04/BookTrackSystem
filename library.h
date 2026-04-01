@@ -6,7 +6,6 @@ class Library {
         std::vector<Book> books;
 
         Library(){
-
         }
 
         void addBook(std::string title, std::string author, std::string description, int pages, std::string genre, bool read){
@@ -18,7 +17,24 @@ class Library {
         }
 
         void updateBook(int updateId, int updateChoice){
-            return;
+            switch(updateChoice){
+                case 1: {
+                    std::string newTitle;
+
+                    printf("Please enter the new title: ");
+                    std::cin.ignore();
+                    std::getline(std::cin, newTitle);
+                    
+                    this->books[updateId].setTitle(newTitle);
+                    break;
+                }
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
         }
 
 };
