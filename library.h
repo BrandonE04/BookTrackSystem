@@ -24,12 +24,20 @@ class Library {
                     printf("Please enter the new title: ");
                     std::cin.ignore();
                     std::getline(std::cin, newTitle);
-                    
+
                     this->books[updateId].setTitle(newTitle);
                     break;
                 }
-                case 2:
+                case 2:{
+                    std::string newAuthor;
+
+                    printf("Please enter the new author: ");
+                    std::cin.ignore();
+                    std::getline(std::cin, newAuthor);
+                    
+                    this->books[updateId].setAuthor(newAuthor);
                     break;
+                }
                 case 3:
                     break;
                 case 4:
