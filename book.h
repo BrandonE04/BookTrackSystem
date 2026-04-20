@@ -30,6 +30,10 @@ class Book {
             this->author = newAuthor;
         }
 
+        void setDescription(std::string newDescription){
+            this->description = newDescription;
+        }
+
 };
 
 std::ostream& operator<<(std::ostream& o, const Book& b){

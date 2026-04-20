@@ -38,8 +38,16 @@ class Library {
                     this->books[updateId].setAuthor(newAuthor);
                     break;
                 }
-                case 3:
+                case 3:{
+                    std::string newDescription;
+
+                    printf("Please enter the new description: ");
+                    std::cin.ignore();
+                    std::getline(std::cin, newDescription);
+                    
+                    this->books[updateId].setDescription(newDescription);
                     break;
+                }
                 case 4:
                     break;
             }
