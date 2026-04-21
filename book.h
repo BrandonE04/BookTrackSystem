@@ -34,6 +34,10 @@ class Book {
             this->description = newDescription;
         }
 
+        void setPages(int newPages){
+            this->pages = newPages;
+        }
+
 };
 
 std::ostream& operator<<(std::ostream& o, const Book& b){

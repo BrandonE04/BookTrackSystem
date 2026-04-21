@@ -49,6 +49,13 @@ class Library {
                     break;
                 }
                 case 4:
+                    int newPages;
+
+                    printf("Please enter the new # of pages: ");
+                    std::cin.ignore();
+                    std::cin >> newPages;
+                    
+                    this->books[updateId].setPages(newPages);
                     break;
             }
         }
